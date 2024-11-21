@@ -21,7 +21,7 @@ app.use(cors());
 //         methods: ['GET', 'POST', 'PUT', 'DELETE'],
 //         allowedHeaders: ['Content-Type'],
 //     })
-// );
+// );                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 
 // Route to home page
 app.get('/', (request, response) => {
