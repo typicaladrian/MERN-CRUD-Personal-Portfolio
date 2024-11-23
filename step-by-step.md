@@ -53,3 +53,13 @@
 13. Create `ShowProject.jsx` to render an individual project with a project id being passed through.
 
 ***Git commit created on November 21st, 2024, 12:59PM.***
+
+### November 22nd, 2024
+1. Create `ProjectCard.jsx` component to render a single project card that will be used throughout the application.
+2. Create `AllProjects.jsx` to retrieve all project data from the database, and use the `ProjectCard` component to render each project as an individual card on the screen.
+3. To `tailwind.config.js`, add `colors`, which allows us to use custom RGB values, as well as new fonts using `fontFamily`, to `theme` section.
+4. Update `Project` backend model to include a short summary, as well as a list of technologies used.
+5. UI improvements using TailwindCSS within the entire application.
+6. Update `BackButton` component to allow arguments to be passed through for navigation purposes.
+
+***Git commit created on November 22nd, 2024, 11:39pm.***

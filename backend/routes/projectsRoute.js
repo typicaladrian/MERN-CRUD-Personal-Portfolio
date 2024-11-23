@@ -9,6 +9,8 @@ router.post('/', async (request, response) => {
         // if required fields are not found
         if (
             !request.body.title ||
+            !request.body.shortSummary ||
+            !request.body.technologiesUsed ||
             !request.body.description ||
             !request.body.imageRef
         ) {
@@ -20,6 +22,8 @@ router.post('/', async (request, response) => {
         // else, proceed with adding new project to database
         const newProject = {
             title: request.body.title,
+            shortSummary: request.body.shortSummary,
+            technologiesUsed: request.body.technologiesUsed,
             description: request.body.description,
             imageRef: request.body.imageRef,
         };
@@ -77,6 +81,8 @@ router.put('/:id', async (request, response) => {
     try {
         if (
             !request.body.title ||
+            !request.body.shortSummary ||
+            !request.body.technologiesUsed ||
             !request.body.description ||
             !request.body.imageRef
         ) {

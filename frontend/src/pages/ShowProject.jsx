@@ -24,29 +24,17 @@ const ShowProject = () => {
       }, []);
 
       return (
-        <div className='p-4'>
-          <BackButton />
-          <h1 className='text-3xl my-4'>Project Details</h1>
-          {loading ? (
+        <div className='p-12 w-100 h-100 bg-primary'>
+        <BackButton destination='/projects' />
+        {loading ? (
             <Spinner />
-          ) : (
-            <div className='flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4'>
-              <div className='my-4'>
-                <span className='text-xl mr-4 text-gray-500'>Id</span>
-                <span>{project._id}</span>
-              </div>
-              <div className='my-4'>
-                <span className='text-xl mr-4 text-gray-500'>Title</span>
-                <span>{project.title}</span>
-              </div>
-              <div className='my-4'>
-                <span className='text-xl mr-4 text-gray-500'>Description</span>
-                <span>{project.description}</span>
-              </div>
-              <div className='my-4'>
-                <span className='text-xl mr-4 text-gray-500'>Image Ref</span>
-                <span>{project.imageRef}</span>
-              </div>
+            ) : (
+            <div className='flex-col'>
+                <div className='font-display text-6xl text-secondary pt-4 pl-4 underline'>{project.title}</div>
+                <div className='font-primary text-4xl text-secondary pt-4 pl-4'> {project.shortSummary} </div>
+                <div className='font-secondary text-2xl text-secondary p-4 italic'> Technologies used: {project.technologiesUsed} </div>
+                <img src={project.imageRef} className='justify-self-center'/>
+                <div className='font-secondary text-xl text-secondary p-4'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nobis temporibus non dolorum, provident unde, mollitia alias minima assumenda esse dolores! Nam quasi dolorum atque quas, doloribus iure odio deleniti. </div>
             </div>
           )}
         </div>

@@ -7,6 +7,16 @@ const projectSchema = mongoose.Schema(
             required: true,
         },
 
+        shortSummary: {
+            type: String,
+            required: true,
+        },
+
+        technologiesUsed: {
+            type: String,
+            required: true,
+        },
+
         description: {
             type: String,
             required: true,
