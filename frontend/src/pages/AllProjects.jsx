@@ -16,7 +16,7 @@ const AllProjects = () => {
     useEffect(() => {
     setLoading(true);
     axios
-        .get('http://localhost:5555/projects')
+        .get('http://localhost:5555/api/projects')
         .then((response) => {
         setProjects(response.data.data);
         setLoading(false);
@@ -32,7 +32,7 @@ const AllProjects = () => {
     };
 
     return (
-        <div className='w-100 h-100 bg-primary text-secondary p-12'>
+        <div className='w-100 min-h-screen bg-primary text-secondary p-12'>
             <BackButton destination='/'/>
             <h1 className='py-6 font-primary text-2xl underline'> All Projects: </h1>
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8'>

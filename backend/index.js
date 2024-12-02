@@ -21,7 +21,7 @@ app.use(express.json())
 
 // Middleware for handling CORS policy
 // This version allows ALL origins
-//app.use(cors());
+app.use(cors());
 
 // This version only allow custom origins, instead of allowing all origins
 // app.use(
@@ -38,7 +38,7 @@ app.use(express.json())
 //     return response.status(234).send('Backend for Adrian Rodriguez\'s Personal Portfolio')
 // });
 
-app.use('/projects', projectsRoute);
+app.use('/api/projects', projectsRoute);
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "/frontend/dist")));

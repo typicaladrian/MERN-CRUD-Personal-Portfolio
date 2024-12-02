@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
-        <div className="flex w-screen h-screen justify-center items-center bg-primary">
+        <div className="flex w-screen min-h-screen justify-center items-center bg-primary">
             <div className="border rounded-lg w-2/5 h-auto px-5 py-10 border-secondary">
               <div className="flex flex-row border rounded-lg border-secondary items-center px-1">
                 <img src="/headshot.jpg" alt="Headshot of Adrian Rodriguez" className='w-1/4 rounded-full p-4'/>

@@ -12,7 +12,7 @@ const ShowProject = () => {
     useEffect(() => {
         setLoading(true);
         axios
-          .get(`http://localhost:5555/projects/${id}`)
+          .get(`http://localhost:5555/api/projects/${id}`)
           .then((response) => {
             setProject(response.data);
             setLoading(false);
@@ -24,7 +24,7 @@ const ShowProject = () => {
       }, []);
 
       return (
-        <div className='p-12 w-100 h-100 bg-primary'>
+        <div className='p-12 w-100 min-h-screen bg-primary'>
         <BackButton destination='/projects' />
         {loading ? (
             <Spinner />

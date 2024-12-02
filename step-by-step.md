@@ -105,3 +105,9 @@ Back after a long illness and Thanksgiving break! Let's get this website deploye
     2. Fixes will be made tomorrow.
 
 ***Git commit created on December 2nd, 2024, 12:07am.***
+
+### December 2nd, 2024
+1. Make small UI changes to all pages.
+2. Update API route.
+3. Re-enable CORS policy for all origins.
+4. These changes should address the issue found yesterday. Let's test it now by pushing the code to GitHub, and deploying on render.com
