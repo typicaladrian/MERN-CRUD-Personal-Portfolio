@@ -63,3 +63,14 @@
 6. Update `BackButton` component to allow arguments to be passed through for navigation purposes.
 
 ***Git commit created on November 22nd, 2024, 11:39pm.***
+
+### December 1st, 2024
+Back after a long illness and Thanksgiving break! Let's get this website deployed!
+1. Update `./backend/index.js` to include static page rendering if in production mode.
+2. In the root `package.json`, define scripts that will run in `build` and `start` commands.
+    1. When running `build` script, we want to run `npm install` in both the backend and the frontend to install required dependencies, then afterwards build the frontend application.
+    2. Following that, the `start` script is run to set the `NODE_ENV` environment variable to production and then `node backend/index.js` is run to start the server.
+3. Small UI changes to the home page.
+4. Push to GitHub to save current changes so that we can proceed with deployment.
+
+***Git commit created on November 22nd, 2024, 11:39pm.***

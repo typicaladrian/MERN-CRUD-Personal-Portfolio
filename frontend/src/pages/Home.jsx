@@ -5,14 +5,14 @@ const Home = () => {
         <div className="flex w-screen h-screen justify-center items-center bg-primary">
             <div className="border rounded-lg w-2/5 h-auto px-5 py-10 border-secondary">
               <div className="flex flex-row border rounded-lg border-secondary items-center px-1">
-                <img src="../public/headshot.jpg" alt="Headshot of Adrian Rodriguez" className='w-1/4 rounded-full p-4'/>
+                <img src="/headshot.jpg" alt="Headshot of Adrian Rodriguez" className='w-1/4 rounded-full p-4'/>
                 <div className="h-min text-secondary font-primary">
                   Hello! My name is Adrian Rodriguez!
                 </div>
               </div>
               <div className='ml-4 mt-4 text-secondary font-secondary'>
                 <div>
-                  <Link to='projects'>projects...</Link>
+                  <Link className='underline' to='projects'>projects...</Link>
                 </div>
                 <div className='pb-2'>
                   experience...

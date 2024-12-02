@@ -3,3 +3,11 @@ config.js
 
 # Node modules
 node_modules
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.logs
+npm-debug.log*

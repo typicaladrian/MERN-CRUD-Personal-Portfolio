@@ -3,9 +3,13 @@ import { PORT, mongoDBURL } from "./config.js";
 import mongoose, { mongo } from "mongoose";
 import projectsRoute from "./routes/projectsRoute.js"
 import cors from "cors";
+import path from "path";
 
 // Instantiate Express application
 const app = express();
+
+// Variable for root directory
+const __dirname = path.resolve();
 
 // Middleware to allow data to become available in request.body.
 app.use(express.json())
@@ -24,12 +28,20 @@ app.use(cors());
 // );                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 
 // Route to home page
-app.get('/', (request, response) => {
-    console.log(request)
-    return response.status(234).send('Backend for Adrian Rodriguez\'s Personal Portfolio')
-});
+// app.get('/', (request, response) => {
+//     console.log(request)
+//     return response.status(234).send('Backend for Adrian Rodriguez\'s Personal Portfolio')
+// });
 
 app.use('/projects', projectsRoute);
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+    app.get("*", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
+    });
+}
 
 // connect to database using mongoose, ensuring to specify the database name.
 // use a then catch block to handle different situations
@@ -41,6 +53,7 @@ mongoose
         // only connect to port if our database connection is successful
         app.listen(PORT, () => {
             console.log(`App is listening to port: ${PORT}`)
+            console.log(`http://localhost:${PORT}`)
         });
     })
     .catch((error) => {
