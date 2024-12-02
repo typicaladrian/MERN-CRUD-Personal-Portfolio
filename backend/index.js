@@ -11,7 +11,7 @@ dotenv.config();
 // Instantiate Express application
 const app = express();
 
-const PORT = process.env.PORT || 5555;
+const port = process.env.PORT || 5555;
 
 // Variable for root directory
 const __dirname = path.resolve();
@@ -56,9 +56,9 @@ mongoose
         console.log('App is connected to database');
         
         // only connect to port if our database connection is successful
-        app.listen(PORT, () => {
-            console.log(`App is listening to port: ${PORT}`)
-            console.log(`http://localhost:${PORT}`)
+        app.listen(port, () => {
+            console.log(`App is listening to port: ${port}`)
+            console.log(`http://localhost:${port}`)
         });
     })
     .catch((error) => {
