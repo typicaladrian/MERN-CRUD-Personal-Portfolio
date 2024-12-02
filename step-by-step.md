@@ -86,14 +86,22 @@ Back after a long illness and Thanksgiving break! Let's get this website deploye
     4. To "Environment Variables", add our `MONGO_URI` and `PORT` variables from our `config.js` file.
     5. Click "Deploy Web Service".
 
-7. Issue: Deployment is failing on Render. Going to try to remove CORS policy middleware code as maybe this is the issue.
+7. ISSUE: Deployment is failing on Render. Going to try to remove CORS policy middleware code as maybe this is the issue.
 
 ***Git commit created on December 1st, 2024, 11:13pm.***
 
-8. Issue: New deployment error on Render. Need to get rid of `config.js` file and move everything to root `.env` file.
+8. ISSUE: New deployment error on Render. Need to get rid of `config.js` file and move everything to root `.env` file.
 9. Install dotenv to backend using `npm install dotenv`.
     1. dotenv will be used to load environment variables into the application.
 10. To `./backend/index.js`, add `dotenv.config()` line to file. Update lines to get rid of use of `config.js` variables. Delete `config.js`.
 11. Make sure to add `.env` to `.gitignore` file.
 
 ***Git commit created on December 1st, 2024, 11:27pm.***
+
+12. Add outbound IP address from Render to MongoDB allowed IP connections.
+13. Deployment is now working.
+14. ISSUE: Projects are not rendering on page.
+    1. This is most likely due to the fact that the website URL for displaying all projects is the same as the address for the API.
+    2. Fixes will be made tomorrow.
+
+***Git commit created on December 2nd, 2024, 12:07am.***
