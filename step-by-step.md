@@ -77,10 +77,14 @@ Back after a long illness and Thanksgiving break! Let's get this website deploye
 
 5. Update `./backend/index.js` to use `process.env` environment variables if `config.js` variables are not found.
 
-
+***Git commit created on December 1st, 2024, 10:46pm.***
 
 6. Head to render.com to start deployment of website.
     1. Log in, and select "New web service".
     2. Connect the GitHub repository of the website to Render.
     3. Update the "Build Command" and "Start Command" settings to match those found in the root `package.json` file.
-    
+    4. To "Environment Variables", add our `MONGO_URI` and `PORT` variables from our `config.js` file.
+    5. Click "Deploy Web Service".
+
+7. Issue: Deployment is failing on Render. Going to try to remove CORS policy middleware code as maybe this is the issue.
+
