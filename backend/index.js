@@ -1,5 +1,5 @@
 import express from "express"
-import { PORT, mongoDBURL } from "./config.js";
+import { CONFIG_PORT, mongoDBURL } from "./config.js";
 import mongoose, { mongo } from "mongoose";
 import projectsRoute from "./routes/projectsRoute.js"
 import cors from "cors";
@@ -7,6 +7,10 @@ import path from "path";
 
 // Instantiate Express application
 const app = express();
+
+const PORT = process.env.PORT || CONFIG_PORT;
+
+const dbURL = process.env.MONGO_URI || mongoDBURL;
 
 // Variable for root directory
 const __dirname = path.resolve();
@@ -46,7 +50,7 @@ if (process.env.NODE_ENV === "production") {
 // connect to database using mongoose, ensuring to specify the database name.
 // use a then catch block to handle different situations
 mongoose
-    .connect(mongoDBURL, { dbName: 'personalPortfolio' })
+    .connect(dbURL, { dbName: 'personalPortfolio' })
     .then(() => {
         console.log('App is connected to database');
         

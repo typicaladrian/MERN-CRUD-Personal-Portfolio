@@ -73,4 +73,14 @@ Back after a long illness and Thanksgiving break! Let's get this website deploye
 3. Small UI changes to the home page.
 4. Push to GitHub to save current changes so that we can proceed with deployment.
 
-***Git commit created on November 22nd, 2024, 11:39pm.***
+***Git commit created on December 1st, 2024, 10:29pm.***
+
+5. Update `./backend/index.js` to use `process.env` environment variables if `config.js` variables are not found.
+
+
+
+6. Head to render.com to start deployment of website.
+    1. Log in, and select "New web service".
+    2. Connect the GitHub repository of the website to Render.
+    3. Update the "Build Command" and "Start Command" settings to match those found in the root `package.json` file.
+    
