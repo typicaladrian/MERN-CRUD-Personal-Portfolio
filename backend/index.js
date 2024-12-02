@@ -1,16 +1,17 @@
 import express from "express"
-import { CONFIG_PORT, mongoDBURL } from "./config.js";
 import mongoose, { mongo } from "mongoose";
 import projectsRoute from "./routes/projectsRoute.js"
 import cors from "cors";
 import path from "path";
+import dotenv from "dotenv";
+
+// Load environment variables
+dotenv.config();
 
 // Instantiate Express application
 const app = express();
 
-const PORT = process.env.PORT || CONFIG_PORT;
-
-const dbURL = process.env.MONGO_URI || mongoDBURL;
+const PORT = process.env.PORT || 5555;
 
 // Variable for root directory
 const __dirname = path.resolve();
@@ -50,7 +51,7 @@ if (process.env.NODE_ENV === "production") {
 // connect to database using mongoose, ensuring to specify the database name.
 // use a then catch block to handle different situations
 mongoose
-    .connect(dbURL, { dbName: 'personalPortfolio' })
+    .connect(process.env.MONGO_URI, { dbName: 'personalPortfolio' })
     .then(() => {
         console.log('App is connected to database');
         

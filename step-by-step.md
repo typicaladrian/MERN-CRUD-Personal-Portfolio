@@ -88,3 +88,10 @@ Back after a long illness and Thanksgiving break! Let's get this website deploye
 
 7. Issue: Deployment is failing on Render. Going to try to remove CORS policy middleware code as maybe this is the issue.
 
+***Git commit created on December 1st, 2024, 11:13pm.***
+
+8. Issue: New deployment error on Render. Need to get rid of `config.js` file and move everything to root `.env` file.
+9. Install dotenv using `npm install dotenv`.
+    1. dotenv will be used to load environment variables into the application.
+10. To `./backend/index.js`, add `dotenv.config()` line to file. Update lines to get rid of use of `config.js` variables. Delete `config.js`.
+11. Make sure to add `.env` to `.gitignore` file.

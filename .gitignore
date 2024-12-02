@@ -1,5 +1,5 @@
-# Backend Config File
-config.js
+# Environment Variables
+.env
 
 # Node modules
 node_modules
