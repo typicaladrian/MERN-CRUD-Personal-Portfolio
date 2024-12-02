@@ -11,18 +11,21 @@ const AllProjects = () => {
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(false);
 
+    // Define apiUrl to connect to the database
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5555';
+
     // use effect to set loading state, where axios requests info using .get,
     // and once it recieves it, it sets loading state back to false
     useEffect(() => {
     setLoading(true);
     axios
-        .get('http://localhost:5555/api/projects')
+        .get(`${apiUrl}/api/projects`)
         .then((response) => {
         setProjects(response.data.data);
         setLoading(false);
         })
         .catch((error) => {
-        console.log(error);
+            console.log(error);
         setLoading(false);
         });
     }, []);

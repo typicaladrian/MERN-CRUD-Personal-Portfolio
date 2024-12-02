@@ -8,11 +8,13 @@ const ShowProject = () => {
     const [project, setProject] = useState({});
     const [loading, setLoading] = useState(false);
     const { id } = useParams();
+    const apiUrl = import.meta.env.VITE_API_URL || process.env.VITE_API_URL || 'http://localhost:5555';
+
 
     useEffect(() => {
         setLoading(true);
         axios
-          .get(`http://localhost:5555/api/projects/${id}`)
+          .get(`${apiUrl}/api/projects/${id}`)
           .then((response) => {
             setProject(response.data);
             setLoading(false);

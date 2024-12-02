@@ -21,16 +21,10 @@ app.use(express.json())
 
 // Middleware for handling CORS policy
 // This version allows ALL origins
-app.use(cors());
+//app.use(cors());
 
 // This version only allow custom origins, instead of allowing all origins
-// app.use(
-//     cors({
-//         origin: 'http://localhost:3000',
-//         methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//         allowedHeaders: ['Content-Type'],
-//     })
-// );                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+app.use(cors({ origin: ['https://localhost:5173', 'https://mern-crud-personal-portfolio.onrender.com'] }));                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
 // Route to home page
 // app.get('/', (request, response) => {

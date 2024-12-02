@@ -111,3 +111,14 @@ Back after a long illness and Thanksgiving break! Let's get this website deploye
 2. Update API route.
 3. Re-enable CORS policy for all origins.
 4. These changes should address the issue found yesterday. Let's test it now by pushing the code to GitHub, and deploying on render.com
+
+***Git commit created on December 2nd, 2024, 4:26pm.***
+
+5. Issue still not fixed.
+6. Use ChatGPT to try and adress the issue.
+7. *POSSIBLE SOLUTION:* Change `axios.get()` calls to use the new render.com domain for our application.
+    1. I realized that I am using `localhost:5555` to try and get data, which isn't running in our deployed application since all data is being hosted by render.com.
+    2. Use `import.meta.env.VITE_API_URL` to import .env variables.
+8. Change CORS policy to allow connections from ONLY our localhost:5173 Vite application or our render.com domain.
+9. Push to Github main branch and re-render on render.com.
+
