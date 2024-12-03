@@ -122,3 +122,14 @@ Back after a long illness and Thanksgiving break! Let's get this website deploye
 8. Change CORS policy to allow connections from ONLY our localhost:5173 Vite application or our render.com domain.
 9. Push to Github main branch and re-render on render.com.
 
+***Git commit created on December 2nd, 2024, 6:33pm.***
+
+**Issue #1 fixed!** A lot was learned from this debugging session in regards to how websites are actually rendered and built for live deployment.
+
+Lets move onto working on more issues, starting with the mobile UI, which doesnt seem to be appearing as expected.
+
+10. Fix appearance of headshot image, which was due to the fact that the home page borders were not sized properly.
+
+**Issue #2 fixed!** Learned that Tailwind uses a mobile-first breakpoint system, meaning that defining utilities and styles for a given screen size will affect all screen sizes at that point and *above*. This means that we should **first style for mobile**, then add breakpoints when needed.
+
+***Git commit created on December 2nd, 2024, 8:30pm.***
