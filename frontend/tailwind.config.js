@@ -9,6 +9,11 @@ export default {
     colors: {
       'primary': "#181C14",
       'secondary': "#ECDFCC",
+      'white': '#FFFFFF',
+      'test1': '#1c915a',
+      'test2': '#661478',
+      'test3': '#f0cf4a',
+      'test4': '#dd612c'
     },
     fontFamily: {
       'primary': ['EB Garamond', 'serif'],
