@@ -133,3 +133,21 @@ Lets move onto working on more issues, starting with the mobile UI, which doesnt
 **Issue #2 fixed!** Learned that Tailwind uses a mobile-first breakpoint system, meaning that defining utilities and styles for a given screen size will affect all screen sizes at that point and *above*. This means that we should **first style for mobile**, then add breakpoints when needed.
 
 ***Git commit created on December 2nd, 2024, 8:30pm.***
+
+### December 5th, 2024
+
+1. Worked on Issue #4, which is a redesign of the page.
+
+***Git commit created on December 5th, 2024, 1:14am.***
+
+### December 9th, 2024
+
+1. More work on Issue #4.
+2. Create `DownloadButton` component, which takes in a file name and an inner text to create a button that, when clicked, downloads a file to the device under the `fileName` name.
+3. Install `react-multi-carousel` to start working on the project showcase section of the page.
+4. Add `Carousel` component to main page to display all projects.
+    1. Make sure to import both `Carousel` from `"react-multi-carousel"`AND `"react-multi-carousel/lib/styles.css"`!
+
+Mobile site almost done!
+
+***Git commit created on December 9th, 2024, 10:32am.***

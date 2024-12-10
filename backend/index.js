@@ -24,7 +24,7 @@ app.use(express.json())
 //app.use(cors());
 
 // This version only allow custom origins, instead of allowing all origins
-app.use(cors({ origin: ['https://localhost:5173', 'https://mern-crud-personal-portfolio.onrender.com'] }));                                                                                                                                                                                                                                                                                                                                                                                                                                          
+app.use(cors({ origin: ['http://localhost:5173', 'https://mern-crud-personal-portfolio.onrender.com'] }));                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
 // Route to home page
 // app.get('/', (request, response) => {
