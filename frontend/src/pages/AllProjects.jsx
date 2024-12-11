@@ -3,6 +3,7 @@ import Spinner from "../components/Spinner";
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import BackButton from "../components/BackButton";
+import Header from "../components/Header";
 
 const AllProjects = () => {
     // useState and useEffect feature of React.js
@@ -35,13 +36,17 @@ const AllProjects = () => {
     };
 
     return (
-        <div className='w-100 min-h-screen bg-primary text-secondary p-12'>
-            <BackButton destination='/'/>
-            <h1 className='py-6 font-primary text-2xl underline'> All Projects: </h1>
-            <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8'>
-            {projects.map((item) => (
-                <ProjectCard key={item._id} project={item} />
-            ))}
+        <div className="flex justify-center min-w-screen min-h-screen bg-primary">
+            <div className="flex-col border-10 rounded-3xl w-11/12 text-center my-10 mx-5 bg-white">
+                <Header/>
+                <div className='flex flex-col py-5 px-5'>
+                    <h1 className='py-6 text-2xl font-semibold'> All Projects </h1>
+                        <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8'>
+                            {projects.map((item) => (
+                                <ProjectCard key={item._id} project={item} />
+                            ))}
+                    </div>
+                </div>
             </div>
         </div>
       );

@@ -1,4 +1,4 @@
-const DownloadButton = ({ fileName, innerText }) => {
+const DownloadText = ({ fileName, innerText }) => {
     const onButtonClick = () => {
         fetch(fileName).then((response) => {
             response.blob().then((blob) => {
@@ -14,10 +14,10 @@ const DownloadButton = ({ fileName, innerText }) => {
     };
     
     return (
-        <div className='flex w-11/12 justify-center border-grey hover:border-primary border-2 rounded-full px-4 py-2 shadow-sm hover:shadow-lg hover:shadow-primary text-grey' onClick={onButtonClick}>
+        <div className='underline cursor-pointer' onClick={onButtonClick}>
             {innerText}
         </div>
     );
 };
 
-export default DownloadButton;
+export default DownloadText;

@@ -141,7 +141,6 @@ Lets move onto working on more issues, starting with the mobile UI, which doesnt
 ***Git commit created on December 5th, 2024, 1:14am.***
 
 ### December 9th, 2024
-
 1. More work on Issue #4.
 2. Create `DownloadButton` component, which takes in a file name and an inner text to create a button that, when clicked, downloads a file to the device under the `fileName` name.
 3. Install `react-multi-carousel` to start working on the project showcase section of the page.
@@ -151,3 +150,15 @@ Lets move onto working on more issues, starting with the mobile UI, which doesnt
 Mobile site almost done!
 
 ***Git commit created on December 9th, 2024, 10:32am.***
+
+### December 10th, 2024
+1. Almost done with mobile site for Issue #4.
+2. Looking at the desktop site, everything is still looking good with the current breakpoints we have set.
+3. Update main page personal information.
+4. Install `react-social-icons` to get started on the contact page.
+5. Add social media and email icons to contact section.
+6. Convert header div into a reusable component `Header` as it will be used throughout the entire website.
+7. Update all pages to match main page styling.
+8. Push to main Github branch to test deployment.
+
+***Git commit created on December 10th, 2024, 11:45pm.***
