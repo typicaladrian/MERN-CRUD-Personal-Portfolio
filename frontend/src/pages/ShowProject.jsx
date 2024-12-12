@@ -32,11 +32,11 @@ const ShowProject = () => {
                 {loading ? (
                     <Spinner />
                 ) : (
-                    <div className='flex flex-col py-5 px-5'>
+                    <div className='flex flex-col py-5 px-5 justify-center items-center'>
                         <div className='text-2xl font-semibold underline'>{project.title}</div>
                         <div className='text-xl italic'> {project.shortSummary} </div>
                         <div className='text-sm italic'> Technologies used: {project.technologiesUsed} </div>
-                        <img src={project.imageRef} className='mx-4 mt-4 mb-6'/>
+                        <img src={project.imageRef} className='mx-4 mt-4 mb-6 md:w-1/2'/>
                         <div className='text-sm md:text-lg text-l'> {project.description} </div>
                     </div>
               )}
