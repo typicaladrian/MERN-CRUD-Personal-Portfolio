@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import DownloadButton from "../components/DownloadButton";
-import DownloadText from "../components/DownloadText";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Spinner from "../components/Spinner";
@@ -25,20 +24,20 @@ const breakpoints = {
 
     lg: {
         breakpoint: {min: 1024, max: 1279},
-        items: 3,
-        slidesToSlide: 3
+        items: 2,
+        slidesToSlide: 2
     },
 
     xl: {
         breakpoint: {min: 1280, max: 1535},
-        items: 3,
-        slidesToSlide: 3
+        items: 2,
+        slidesToSlide: 2
     },
 
     double_xl: {
         breakpoint: {min: 1536, max: 3000},
-        items: 4,
-        slidesToSlide: 4
+        items: 2,
+        slidesToSlide: 2
     }
 
   };
@@ -79,11 +78,11 @@ const Home = () => {
                     </div>
                     {/* text container */}
                     <div>
-                        <div className="text-xs text-grey">Software Developer</div>
-                        <div className="text-lg">Adrian Rodriguez</div>
-                        <div className="text-xs mx-6 italic">Rensselaer Polytechnic Institute Alumni</div>
-                        <div className="text-xs mx-6 mt-2">Experience as a SDET Intern at Gilbarco Veeder Root, as well as a Software Developer for multiple open source projects. </div>
-                        <div className="text-xs mx-6 mt-2">Proficient in Python, C++, JavaScript, MongoDB, and web frameworks like React, Next.js, and Express.</div>
+                        <div className="text-xs md:text-sm text-grey">Software Developer</div>
+                        <div className="text-lg md:text-xl">Adrian Rodriguez</div>
+                        <div className="text-xs md:text-sm mx-6 italic">Rensselaer Polytechnic Institute Alumni</div>
+                        <div className="text-xs md:text-sm mx-6 mt-2">Experience as a SDET Intern at Gilbarco Veeder Root, as well as a Software Developer for multiple open source projects. </div>
+                        <div className="text-xs md:text-sm mx-6 mt-2">Proficient in Python, C++, JavaScript, MongoDB, and web frameworks like React, Next.js, and Express.</div>
 
                         {/* Resume and Contact Button Container */}
                         <div className="flex flex-col md:flex-row justify-center md:justify-start items-center m-6 gap-3">
@@ -100,7 +99,7 @@ const Home = () => {
                     Projects
                 </div>
                 <div className='m-4'>
-                    <Carousel responsive={breakpoints} autoPlay infinite={false} rewind showDots={true} removeArrowOnDeviceType={['sm', 'md', 'lg']}>
+                    <Carousel responsive={breakpoints} autoPlay infinite={false} showDots={true} removeArrowOnDeviceType={['sm']} draggable={false} >
                         {projects.map((item) => (
                             <ProjectCard key={item._id} project={item} />
                         ))}

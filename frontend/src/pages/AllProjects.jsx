@@ -2,7 +2,6 @@ import ProjectCard from "../components/ProjectCard";
 import Spinner from "../components/Spinner";
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import BackButton from "../components/BackButton";
 import Header from "../components/Header";
 
 const AllProjects = () => {

@@ -162,3 +162,13 @@ Mobile site almost done!
 8. Push to main Github branch to test deployment.
 
 ***Git commit created on December 10th, 2024, 11:45pm.***
+
+### December 11th, 2024
+1. Delete `BackButton` component since it will not be used in our website anymore.
+2. Update `index.html` to include new website metadata title and icon.
+3. Create `ViewResume` page to simply view the resume as an embedded PDF rather than download it.
+4. Update all project data to match real project data.
+5. Issue #3 completed! All information on website is accurate and up to date.
+
+We now have a fully deployable and live running website!
+

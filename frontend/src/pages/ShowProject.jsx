@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import BackButton from "../components/BackButton";
 import Spinner from "../components/Spinner";
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
@@ -37,8 +36,8 @@ const ShowProject = () => {
                         <div className='text-2xl font-semibold underline'>{project.title}</div>
                         <div className='text-xl italic'> {project.shortSummary} </div>
                         <div className='text-sm italic'> Technologies used: {project.technologiesUsed} </div>
-                        <img src={project.imageRef} className='m-4'/>
-                        <div className='text-sm'> {project.description} </div>
+                        <img src={project.imageRef} className='mx-4 mt-4 mb-6'/>
+                        <div className='text-sm md:text-lg text-l'> {project.description} </div>
                     </div>
               )}
             </div>
