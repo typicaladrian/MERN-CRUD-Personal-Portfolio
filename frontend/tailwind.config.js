@@ -10,6 +10,7 @@ export default {
       'primary': "#181C14",
       'secondary': "#ECDFCC",
       'grey': "#747474",
+      'green': "#43da5f",
       'white': '#FFFFFF',
       'test1': '#1c915a',
       'test2': '#661478',

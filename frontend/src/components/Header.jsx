@@ -14,6 +14,7 @@ const Header = () => {
             </div>
             {/* header tabs container */}
             <div className="w-2/5 flex justify-end items-center text-xs md:text-sm">
+                <Link className='mx-2 underline' to='/'>home</Link>
                 <Link className='mx-2 underline' to='/view_resume'>view resume</Link>
                 <Link className='mx-2 underline' to='/projects'>projects</Link>
             </div>

@@ -82,7 +82,14 @@ const Home = () => {
                         <div className="text-lg md:text-xl">Adrian Rodriguez</div>
                         <div className="text-xs md:text-sm mx-6 italic">Rensselaer Polytechnic Institute Alumni</div>
                         <div className="text-xs md:text-sm mx-6 mt-2">Experience as a SDET Intern at Gilbarco Veeder Root, as well as a Software Developer for multiple open source projects. </div>
-                        <div className="text-xs md:text-sm mx-6 mt-2">Proficient in Python, C++, JavaScript, MongoDB, and web frameworks like React, Next.js, and Express.</div>
+                        <div className="text-xs md:text-sm mx-6 mt-2">Proficient in Python, modern web frameworks like React.js, Next.js, and Express.js, C++, JavaScript, and MongoDB.</div>
+                        {/* "Currently working on" container */}
+                        <div className="flex flex-row justify-center items-center m-4">
+                            <div className="animate-pulse w-1 h-1 md:w-1.5 md:h-1.5 border-2 border-green bg-green rounded-full"/>
+                            <div className="text-xs md:text-sm mx-2.5 mb-0.5">Currently working on... personal project!</div>
+                        </div>
+                        
+                        
 
                         {/* Resume and Contact Button Container */}
                         <div className="flex flex-col md:flex-row justify-center md:justify-start items-center m-6 gap-3">
